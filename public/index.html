@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elijah Prasetya</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tambahan.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Lenis -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+  </head>
+  <body class="overflow-x-hidden bg-orange-50 duration-1000 ease-in-out">
+    <div class="scrollSmootherWrapper">
+      <div class="scrollSmootherContent">
+        <header class="h-screen w-full">
+          <nav
+            class="fixed z-10 flex w-full items-center justify-between bg-orange-50 px-8 py-8 shadow-md lg:justify-between xl:px-48"
+          >
+            <div class="logo">
+              <h1 class="font-belgiano text-2xl font-bold">ElijahPrasetya</h1>
+            </div>
+
+            <ul class="hidden gap-7 lg:flex">
+              <li><a class="link" href="#intro">HOME</a></li>
+              <li><a class="link" href="#about">ABOUT</a></li>
+              <li><a class="link" href="#exploration">EXPLORATION</a></li>
+              <li><a class="link" href="">CONTACT</a></li>
+            </ul>
+
+            <button
+              class="hidden text-nowrap rounded-md border-2 border-solid border-stone-950 bg-stone-900 px-5 py-2 font-belgiano text-xl text-stone-50 duration-150 ease-in hover:bg-orange-50 hover:text-stone-950 lg:flex"
+            >
+              Get in touch
+            </button>
+
+            <button
+              onclick="tampilkanNav()"
+              id="hamburger"
+              class="flex lg:hidden"
+            >
+              <img src="image/menu.png" alt="hamburger-menu" class="h-5 w-5" />
+            </button>
+          </nav>
+
+          <div
+            id="navMobile"
+            class="navMobile fixed z-20 flex h-screen w-screen -translate-x-full items-center justify-center bg-stone-950 opacity-100 transition duration-1000 ease-in-out"
+          >
+            <ul class="flex flex-col items-center justify-center gap-5">
+              <li>
+                <a onclick="hilangkanNav()" class="mobileNavLink" href="#intro"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a onclick="hilangkanNav()" class="mobileNavLink" href="#about"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  onclick="hilangkanNav()"
+                  class="mobileNavLink"
+                  href="#exploration"
+                  >EXPLORATION</a
+                >
+              </li>
+              <li>
+                <a
+                  onclick="hilangkanNav()"
+                  class="mobileNavLink"
+                  href="#contact"
+                  >CONTACT</a
+                >
+              </li>
+              <li>
+                <button onclick="hilangkanNav()" id="close">
+                  <img src="image/close.svg" alt="close" class="w-5" />
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <section
+            id="intro"
+            class="intro flex h-full w-full flex-col items-center justify-center gap-5 px-8"
+          >
+            <h1
+              class="text-center font-belgiano text-3xl leading-none md:text-4xl lg:text-5xl"
+            >
+              Hi! I Am
+            </h1>
+            <h1
+              id="namaSaya"
+              class="textClipped text-center font-belgiano text-7xl leading-none md:text-8xl lg:text-9xl lg:leading-snug"
+            >
+              Elijah Prasetya
+            </h1>
+            <div
+              class="flex flex-row gap-3"
+              data-aos="zoom-out"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+            >
+              <a
+                href="mailto:elijahprasetya@gmail.com"
+                class="rounded-md border-2 border-solid border-stone-950 bg-stone-900 px-5 py-2 font-belgiano text-xl text-orange-50 duration-150 ease-in hover:bg-orange-50 hover:text-stone-950"
+                >Say Hi!</a
+              >
+              <a
+                href="pdf/CV Elijah Emmanuel Prasetya.pdf"
+                target="_blank"
+                class="rounded-md border-2 border-solid border-stone-950 bg-orange-50 px-5 py-2 font-belgiano text-xl text-stone-900 duration-150 ease-in hover:bg-stone-950 hover:text-orange-50"
+                >Download CV</a
+              >
+            </div>
+          </section>
+        </header>
+
+        <main class="py-8">
+          <section
+            id="about"
+            class="about flex flex-col items-end justify-center gap-5 px-8 lg:flex-row"
+          >
+            <img
+              id="aboutImg"
+              src="image/foto saya.webp"
+              alt=""
+              class="rounded-tl-lg rounded-tr-lg lg:rounded-l-lg lg:rounded-tr-none"
+            />
+
+            <div
+              class="flex h-full flex-col items-center justify-end gap-10 lg:justify-between"
+            >
+              <h1
+                id="aboutHeader"
+                class="w-full text-left font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
+              >
+                About Me
+              </h1>
+              <p id="aboutText" class="text-left font-sans text-2xl">
+                I am Elijah Emmanuel Prasetya, a 16-year-old aspiring software
+                engineer currently studying at SMK Negeri 1 Denpasar. With a
+                strong interest in web development, I possess foundational
+                skills in HTML, CSS, and basic JavaScript. I am passionate about
+                crafting user-friendly and visually appealing digital
+                experiences, focusing on UI/UX principles to create intuitive
+                and engaging interfaces. Through my studies and personal
+                projects, I am continuously expanding my knowledge and honing my
+                technical abilities to contribute to innovative and impactful
+                software solutions.
+              </p>
+            </div>
+          </section>
+          <section id="exploration" class="exploration mt-40 px-0 py-60">
+            <h1
+              id="projectHeader"
+              class="w-full px-8 text-center font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
+            >
+              My Selected Projects
+            </h1>
+
+            <div class="mt-20 grid grid-cols-1 px-8">
+              <div class="card">
+                <div
+                  class="col-start-1 col-end-6 grid lg:col-start-1 lg:col-end-4"
+                >
+                  <img
+                    src="image/Project/anime1.png"
+                    alt=""
+                    id="porto1"
+                    class="cardImg"
+                    onmouseenter="gantiGambar1()"
+                    onmouseleave="kembaliGambar1()"
+                  />
+                </div>
+                <div class="cardText">
+                  <div>
+                    <h1
+                      class="text-wrap font-belgiano text-2xl text-orange-50 md:text-4xl"
+                    >
+                      Anime Recommendation Generator
+                    </h1>
+                    <p class="font-sans text-stone-500">
+                      Random Anime Generator is a website that randomly selects
+                      an anime title. It's a fun tool for discovering new anime
+                      or sparking discussions with other anime fans.
+                    </p>
+                  </div>
+                  <a href="#" class="cardBtn"
+                    ><p>Visit site</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                      /></svg
+                  ></a>
+                </div>
+              </div>
+              <div class="card">
+                <div
+                  class="col-start-1 col-end-6 grid lg:col-start-1 lg:col-end-4"
+                >
+                  <img
+                    src="image/Project/codlin1.png"
+                    alt=""
+                    id="porto2"
+                    class="cardImg"
+                    onmouseenter="gantiGambar2()"
+                    onmouseleave="kembaliGambar2()"
+                  />
+                </div>
+
+                <div class="cardText">
+                  <div>
+                    <h1
+                      class="text-wrap font-belgiano text-2xl text-orange-50 md:text-4xl"
+                    >
+                      Codlin.
+                    </h1>
+                    <p class="font-sans text-stone-500">
+                      Codlin is a programming learning platform offering a
+                      variety of courses and interactive tutorials for beginners
+                      and experienced developers.
+                    </p>
+                  </div>
+                  <a href="#" class="cardBtn"
+                    ><p>Visit site</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                      /></svg
+                  ></a>
+                </div>
+              </div>
+              <div class="card">
+                <div
+                  class="col-start-1 col-end-6 grid lg:col-start-1 lg:col-end-4"
+                >
+                  <img
+                    src="image/Project/marsha-1.png"
+                    alt=""
+                    id="porto3"
+                    class="cardImg"
+                    onmouseenter="gantiGambar3()"
+                    onmouseleave="kembaliGambar3()"
+                  />
+                </div>
+                <div class="cardText">
+                  <div>
+                    <h1
+                      class="text-wrap font-belgiano text-2xl text-orange-50 md:text-4xl"
+                    >
+                      MarshaOshi.
+                    </h1>
+                    <p class="font-sans text-stone-500">
+                      MarshaOshi is unofficial fanbase website dedicated to
+                      supporting Marsha Lenathea, a member of the popular
+                      Indonesian idol group JKT48. The website provides updates,
+                      exclusive content, and a community for fans to connect and
+                      celebrate their shared love for Marsha.
+                    </p>
+                  </div>
+                  <a href="#" class="cardBtn"
+                    ><p>Visit site</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                      /></svg
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="contact mt-40 px-8 py-10"></section>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Split Type -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <script src="js/gsap.js"></script>
+  </body>
+</html>

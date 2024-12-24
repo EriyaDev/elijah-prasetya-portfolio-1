@@ -21,7 +21,7 @@
       <div class="scrollSmootherContent">
         <header class="h-screen w-full">
           <nav
-            class="fixed z-10 flex w-full items-center justify-between bg-orange-50 px-8 py-8 shadow-md lg:justify-between xl:px-48"
+            class="fixed z-10 flex w-full items-center justify-between bg-orange-50 px-8 py-8 lg:justify-between xl:px-48"
           >
             <div class="logo">
               <h1 class="font-belgiano text-2xl font-bold">ElijahPrasetya</h1>
@@ -51,7 +51,7 @@
 
           <div
             id="navMobile"
-            class="navMobile fixed z-20 flex h-screen w-screen -translate-x-full items-center justify-center bg-stone-950 opacity-100 transition duration-1000 ease-in-out"
+            class="navMobile fixed z-50 flex h-screen w-screen -translate-x-full items-center justify-center bg-stone-950 opacity-100 transition duration-1000 ease-in-out"
           >
             <ul class="flex flex-col items-center justify-center gap-5">
               <li>
@@ -127,7 +127,7 @@
         <main class="py-8">
           <section
             id="about"
-            class="about flex flex-col items-end justify-center gap-5 px-8 lg:flex-row"
+            class="about flex flex-col items-center justify-center gap-5 px-8 lg:flex-row lg:items-end"
           >
             <img
               id="aboutImg"
@@ -141,7 +141,7 @@
             >
               <h1
                 id="aboutHeader"
-                class="w-full text-left font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
+                class="-z-10 w-full text-left font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
               >
                 About Me
               </h1>
@@ -159,15 +159,15 @@
               </p>
             </div>
           </section>
-          <section id="exploration" class="exploration mt-40 px-0 py-60">
+          <section id="exploration" class="exploration mt-40 px-8 py-60">
             <h1
               id="projectHeader"
-              class="w-full px-8 text-center font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
+              class="w-full text-center font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
             >
               My Selected Projects
             </h1>
 
-            <div class="mt-20 grid grid-cols-1 px-8">
+            <div class="mt-20 grid grid-cols-1">
               <div class="card">
                 <div
                   class="col-start-1 col-end-6 grid lg:col-start-1 lg:col-end-4"
@@ -301,7 +301,75 @@
             </div>
           </section>
 
-          <section id="contact" class="contact mt-40 px-8 py-10"></section>
+          <section
+            id="contact"
+            class="contact mt-80 grid grid-cols-1 bg-orange-50 px-8 py-10 md:mt-96 lg:grid-cols-2"
+          >
+            <div class="z-10 col-start-1 col-end-2 mt-48 grid">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                class="form flex w-full flex-col gap-3"
+              >
+                <h1
+                  class="font-belgiano text-6xl text-stone-900 sm:text-left sm:text-8xl"
+                >
+                  Get in Touch
+                </h1>
+                <div
+                  class="inputSection flex w-full flex-col items-start justify-start gap-3"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="92b663d0-178d-40c9-b897-89dc2cf93fe4"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name..."
+                    required
+                    class="input"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email..."
+                    required
+                    class="input"
+                  />
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message..."
+                    required
+                    class="input"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="btnSubmit rounded-md bg-stone-800 p-2 text-orange-50"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div
+              class="absolute col-start-1 col-end-2 grid h-full translate-y-24 md:h-1/2 lg:relative lg:col-start-2 lg:col-end-3 lg:mt-48 lg:w-full"
+            >
+              <script
+                type="module"
+                src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"
+              ></script>
+              <spline-viewer
+                loading-anim-type="spinner-small-light"
+                url="https://prod.spline.design/tijyEz2hxZTQEPdo/scene.splinecode"
+              ></spline-viewer>
+            </div>
+          </section>
         </main>
       </div>
     </div>

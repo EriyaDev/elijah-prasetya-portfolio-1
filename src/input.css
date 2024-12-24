@@ -30,3 +30,7 @@
 .cardImg {
   @apply rounded-tl-md rounded-tr-md lg:rounded-bl-lg lg:rounded-tl-lg lg:rounded-tr-none;
 }
+
+.input {
+  @apply w-full rounded-lg border-2 border-stone-400 bg-orange-50 bg-opacity-50 px-2 py-2 text-stone-950;
+}

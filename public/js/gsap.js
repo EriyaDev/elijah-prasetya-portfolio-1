@@ -93,14 +93,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     color: "#fff7ed",
   });
 
-  // gsap.utils.toArray(".card").forEach((card, i) => {
-  //     ScrollTrigger.create({
-  //         trigger: card,
-  //         start: "top top",
-  //         pin: true,
-  //         pinSpacing: false
-  //     })
-  // })
+  gsap.utils.toArray(".card").forEach((card, i) => {
+      ScrollTrigger.create({
+          trigger: card,
+          start: "top 90px",
+          pin: true,
+          pinSpacing: false
+      })
+  })
 });
 
 // Initialize Lenis
